@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Rooms</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" width="220" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menú</span><span class="box-menu-icon"></span><br>
+            </a>
+
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Rooms</li>
+
+                <li><a href="index.html">Introducción</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="escape.html">Escape Rooms</a></li>
+                <li><a href="about.html">Corporativo</a></li>
+                <li><a href="contact.html">Nuestras oficinas</a></li>
+
+                <li class="box-label">Síguenos</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+
+                <li class="box-label">Hello/Hola</li>
+                <li class="box-social"><a href="#0"><img src="img/flagEn.jpg" width="30"></a></li>
+                <li class="box-social"> <a href="#0"><img src="img/flagEs.png" width="30"> </a> <i class="ion-ios-circle-filled color"></i></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+
+        <!-- box-intro -->
+        <section class="box-intro">
+            <div class="table-cell">
+                <h1 class="box-headline letters rotate-2">
+                    <span class="box-words-wrapper">
+                        <b class="is-visible">ghost.</b>
+                        <b style="margin-left: 120px">kobol.</b>
+                        <b>ni&nbsp;no&nbsp;kuni.</b>
+                        <b style="margin-left: 160px">skull.</b>
+                    </span>
+		        </h1>
+                <h5>¿podrás escapar de nuestras habitaciones en tiempo record?</h5>
+            </div>
+
+            <!---SAND CLOCK --->
+            <div class="clock">
+                <svg id="wrap" width="300" height="300">
+
+                  <!-- background -->
+                    <svg>
+                        <circle cx="150" cy="150" r="70" style="fill:#ae8d45"/>
+                    </svg>
+                  
+                  <!-- image -->
+                    <svg>
+                        <path id="hourglass" d="M150,150 C60,85 240,85 150,150 C60,215 240,215 150,150 Z" style="stroke: white; stroke-width:5; fill:white;" />
+                        <animateTransform xlink:href="#hourglass" attributeName="transform" type="rotate" begin="0s" dur="12s" values="0 150 150; 0 150 150; 180 150 150" keyTimes="0; 0.8; 1" repeatCount="indefinite" />
+                    </svg>
+                  
+                    <!-- sand -->
+                    <svg>
+
+                        <!-- upper part -->
+                        <polygon id="upper" points="120,125 180,125 150,147" style="fill:#ae8d45;">
+                          <animate attributeName="points" dur="12s" keyTimes="0; 0.8; 1" values="120,125 180,125 150,147; 150,150 150,150 150,150; 150,150 150,150 150,150" repeatCount="indefinite"/>
+                        </polygon>
+                        
+                        <!-- falling sand -->
+                        <path id="line" stroke-linecap="round" stroke-dasharray="1,4" stroke-dashoffset="200.00" stroke="#ae8d45" stroke-width="2" d="M150,150 L150,198">
+                          <!-- running sand -->
+                          <animate attributeName="stroke-dashoffset" dur="12s" to="1.00" repeatCount="indefinite"/>
+                          <!-- emptied upper -->
+                          <animate attributeName="d" dur="12s" to="M150,195 L150,195" values="M150,150 L150,198; M150,150 L150,198; M150,198 L150,198; M150,195 L150,195" keyTimes="0; 0.65; 0.9; 1" repeatCount="indefinite"/>
+                          <!-- last drop -->
+                          <animate attributeName="stroke" dur="12s" keyTimes="0; 0.65; 0.8; 1" values="#ae8d45;#ae8d45;transparent;transparent" to="transparent" repeatCount="indefinite"/>
+                        </path>
+                
+                        <!-- lower part -->
+                        <g id="lower">
+                            <path d="M150,180 L180,190 A28,10 0 1,1 120,190 L150,180 Z" style="stroke: transparent; stroke-width:5; fill:#ae8d45;">
+                                <animateTransform attributeName="transform" type="translate" keyTimes="0; 0.65; 1" values="0 15; 0 0; 0 0" dur="12s" repeatCount="indefinite" />
+                            </path>
+                            <animateTransform xlink:href="#lower" attributeName="transform"
+                                type="rotate"
+                                begin="0s" dur="12s"
+                                values="0 150 150; 0 150 150; 180 150 150"
+                                keyTimes="0; 0.8; 1"
+                                repeatCount="indefinite"/>
+                        </g>
+                
+                        <!-- lower overlay - hourglass -->
+                        <path d="M150,150 C60,85 240,85 150,150 C60,215 240,215 150,150 Z" style="stroke: white; stroke-width:5; fill:transparent;">
+                            <animateTransform attributeName="transform"
+                                type="rotate"
+                                begin="0s" dur="12s"
+                                values="0 150 150; 0 150 150; 180 150 150"
+                                keyTimes="0; 0.8; 1"
+                                repeatCount="indefinite"/>
+                        </path>
+                    </svg>
+                </svg>
+            </div> 
+        </section>
+        <!-- end box-intro -->
+    </div>
+
+    <!-- portfolio div -->
+    <div class="portfolio-div">
+        <div class="portfolio">
+            <div class="no-padding portfolio_container">
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6  fashion logo">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/nino.jpg" alt="nino" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>ni no kuni</span>
+                                    <em>kids <i class="ion-android-happy" style="font-size: 20px"></i></em>
+                                    <em>Disponible en Querétaro | México DF<br>
+                                        Salas 2A y 2G
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 ads graphics">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/ghost.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>ghost</span>
+                                    <em>Kids <i class="ion-android-boat" style="font-size: 20px"></i></em>
+                                    <em>Disponible en Querétaro | México DF<br>
+                                        Salas 2A y 2G
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-6 col-sm-12 photography">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/kobol.jpg" alt="kobol" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>kobol</span>
+                                    <em>todos <i class="ion-android-people" style="font-size: 20px"></i></em>
+                                    <em>Disponible en Querétaro | México DF<br>
+                                        Salas 2A y 2G
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 fashion ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/skull.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>skull and bones</span>
+                                    <em>todos <i class="ion-android-people" style="font-size: 20px"></i></em>
+                                    <em>Disponible en Querétaro | México DF<br>
+                                        Salas 2A y 2G
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/nino1.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>ni no kuni</span>
+                                    <em>kids <i class="ion-android-happy" style="font-size: 20px"></i></em>
+                                    <em>Disponible en Querétaro | México DF<br>
+                                        Salas 2A y 2G
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-6 col-sm-12 photography">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/skull1.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>skull and bones</span>
+                                    <em>Empresas <i class="ion-power" style="font-size: 20px"></i></em>
+                                    <em>Disponible en Querétaro | México DF<br>
+                                        Salas 2A y 2G
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/ghost1.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>ghost</span>
+                                    <em>escuelas</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/kobol1.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>kobol</span>
+                                    <em>adultos</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/nino2.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>ni no kuni</span>
+                                    <em>competencia</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+
+                <!-- single work -->
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="img/skull2.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>skull and bones</span>
+                                    <em>familia</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- end single work -->
+            </div>
+            <!-- end portfolio_container -->
+        </div>
+        <!-- portfolio -->
+    </div>
+    <!-- end portfolio div -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Rooms 2018</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
